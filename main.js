@@ -1,3 +1,15 @@
+window.onload = function () {
+    const url = document.getElementById('link');
+    url.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        submit();
+        }
+    });
+}
 function getLink(){
     return document.getElementById('link').value;
 }
@@ -35,4 +47,3 @@ function submit(){
     document.getElementById('submit').innerHTML = 'Link Copiado!';
     document.getElementById('submit').style.background = '#7266ba';
 }
-
